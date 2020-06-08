@@ -1,0 +1,15 @@
+6.4品牌分类后台展示操作解析
+    首选根据品牌id和分类id去聚合（term）
+    获取聚合的的分类和品牌id，并且放到list集合中，
+    集合中要获取整个分类的对象及品牌的对象
+    返回结果不用pageResult，重新封装一个实体类 SearchResult
+    设置构造方法（3个），然后用参数最多的构造方法放两个list
+    在放回的结果中把集合返回回去
+    把返回的数据放到created中的filters
+
+6.5商品详情展示
+
+    1.当前台项目访问到www.leyou.com时，跳转到item/spuId/html页面
+    2.修改negix的conf 添加一个location 路径改为ly-goods-web的路径（8084）
+    3.进行跳转，访问item.html页面
+    4.查询 spu/sku/spudetail/规格参数组/品牌/规格参数等
