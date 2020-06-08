@@ -1,6 +1,7 @@
 package com.leyou.pojo;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Table(name = "tb_spec_group")
 public class SpecGroup {
@@ -9,6 +10,15 @@ public class SpecGroup {
     private Long id;
     private String name;
     private Long cid;
+    private List<SpecParam> params;
+
+    public List<SpecParam> getParams() {
+        return params;
+    }
+
+    public void setParams(List<SpecParam> params) {
+        this.params = params;
+    }
 
     public Long getId() {
         return id;
