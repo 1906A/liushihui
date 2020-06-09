@@ -13,3 +13,12 @@
     2.修改negix的conf 添加一个location 路径改为ly-goods-web的路径（8084）
     3.进行跳转，访问item.html页面
     4.查询 spu/sku/spudetail/规格参数组/品牌/规格参数等
+
+6.8商品详情及静态化
+    1.通过th:inline="javascrip 拿到后台的值
+    2.然后在页面中渲染paramMap
+    3.定义indexes进行循环，设置格式如0_0_0网前端图片（images）遍历赋值
+    4.通过sku对标题，价格赋值
+    5.商品详情用th:utext传对象值（用text无法拿到{spuDetail.description}值）
+    6.规格参数对通用属性和特殊属性通过param.generic做判断，再用group.params渲染赋值
+    7.包装列表spuDetail.packingList，售后服务spuDetail.afterService
